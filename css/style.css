@@ -7,11 +7,12 @@
 }
 
 :root{
+    --darkBlue: rgb(24, 41, 97);
     --mainBlue : skyblue;
     --secondBlue : rgb(15, 90, 160);
     --secondBlueAlpha : rgba(15, 90, 160, 0.8);
-    --light: whitesmoke;
     --creamBlue: rgb(198, 238, 248);
+    --light: whitesmoke;
 }
 
 body{
@@ -109,14 +110,16 @@ body{
     justify-content: space-around;
     align-items: center;
     font-size: 1.5rem;
+    width: 80%;
 }
 
 .header .titleContainer button{
     background-color: var(--secondBlue);
     color: var(--mainBlue);
-    padding: 5px 15px;
+    padding: 10px 15px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
     cursor: pointer;
     margin-top: 5px;
 }
@@ -155,6 +158,7 @@ body{
 .us .wrapper{
     background-color: var(--creamBlue);
     padding: 20px 0px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .us .usContent {
@@ -187,7 +191,59 @@ body{
     padding: 10px;
     font-family: 'Quintessential', cursive;
     background-color: var(--light);
+    
 }
+
+.us .textProfile .titleProfile{
+    font-size: 2rem;
+}
+
+/* contacto styles *************** */
+
+
+.contact .contactTitle{
+    margin: 20px auto;
+    text-align: center;
+    font-size: 3rem;
+    
+}
+.contact .contactContent {
+    width: 90%;
+    /* text-align: center; */
+    /* border: 1px solid red; */
+    margin: 5%  auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+        overflow: hidden;
+}
+
+.contact .contactContent img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.contact .contactContent .formGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contact .form{
+    background-color: var(--darkBlue);
+    color: var(--light);    
+}
+
+.contact .form *{
+    /* border: 1px solid tomato; */
+    padding: 10px 0px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
 
 /* footer styles *************** */
 
@@ -318,6 +374,29 @@ body{
         background-color: white;
         width: 60%;
         height: auto;
+    }
+
+    /* contact styles  **************** */
+
+
+   
+
+    .contact .contactContent {
+        flex-direction: row;
+        width: 70%;
+        
+    }
+
+    .contact .contactContent img{
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    
+
+    .contact .form{
+         width: 100%;
     }
 
  }
