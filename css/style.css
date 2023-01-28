@@ -1,0 +1,357 @@
+
+*{
+    margin: 0%;
+    border: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --mainBlue : skyblue;
+    --secondBlue : rgb(15, 90, 160);
+    --secondBlueAlpha : rgba(15, 90, 160, 0.8);
+    --light: whitesmoke;
+    --creamBlue: rgb(198, 238, 248);
+}
+
+body{
+    font-family: sans-serif;
+    
+}
+
+.navBar{
+    /* background-color: var(--secondBlue); */
+    background-color: var(--secondBlueAlpha);
+    color: var(--light);
+    /* position: sticky; */
+    top: 0%;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: relative;
+    
+}
+
+.navBar .logo{
+    /* margin: 0 auto; */
+    padding: 1.5rem 10px;
+}
+.navBar .logo a{
+    text-decoration: none;
+    
+}
+
+.navBar .logo img{
+    width: 20%;
+    padding: 1px;
+    border: 2px double var(--mainBlue);
+    border-radius: 5px;
+}
+
+.navBar .ulNavigation{
+    background-color: yellow;
+    inline-size: 100%;
+    block-size: auto;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+
+.navBar .ulNavigation li{
+    list-style: none;
+    padding: 2rem 0;
+    inline-size: 100%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+.navBar .ulNavigation li a{
+    text-decoration: none;
+}
+
+.navBar .toogle span{ 
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 4rem;
+}
+
+.navBar .toogle span.x{ 
+    display: none;
+}
+/* header styles *************** */
+
+.header{
+    background-image: url(../images/h3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .titleContainer{
+    background-color: rgba(70, 70, 70, .4);
+    color: var(--light);
+    padding: 10px;
+    border-radius: 10px;
+    inline-size: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.header .titleContainer button{
+    background-color: var(--secondBlue);
+    color: var(--mainBlue);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+/* main styles *************** */
+
+.articlesContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.articlesContainer article{
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+    padding: 8%;
+}
+
+.articlesContainer article span{
+    display: none;
+}
+
+.articlesContainer article h2{
+    color: var(--secondBlue);
+    margin-bottom: 5px;
+}
+.articlesContainer article:nth-child(even){
+    text-align: right;
+    margin: 15px 0;
+}
+
+
+/* About Us ---------------------- */
+
+.us .wrapper{
+    background-color: var(--creamBlue);
+    padding: 20px 0px;
+}
+
+.us .usContent {
+    /* border: 1px solid green; */
+    text-align: center;
+    
+}
+
+.us .usContent .profileTittleContent{
+    /* border: 1px solid red; */
+    margin: 20px auto;
+}
+
+.us .usContent .profileContainer{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.us .usContent .profileContainer img{
+    margin: 2rem 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.us .usContent .profileContainer .textProfile{
+    border: 1px solid gold;
+    padding: 10px;
+    font-family: 'Quintessential', cursive;
+    background-color: var(--light);
+}
+
+/* footer styles *************** */
+
+.footerContainer{
+    background-color: var(--secondBlue);
+    color: var(--light);
+    padding: 15px;
+    text-align: center;
+}
+
+.footerContainer p{
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* ************************************************* */
+/* media querys *******************************/
+/* ************************************************* */
+
+@media screen and (min-width: 700px) { 
+ 
+
+    .navBar{
+        /* background-color: var(--secondBlue); */
+        background-color: var(--secondBlueAlpha);
+        color: var(--light);
+        /* position: sticky; */
+        top: 0%;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        position: relative;
+        
+    }
+
+    .navBar .logo img{
+        width: 100px;
+    }
+
+    .navBar .hamburguer{
+        display: none;
+    }
+
+    .navBar .ulNavigation{
+        background-color: var(--Blue);
+        inline-size: auto;
+        block-size: auto;
+        display: flex;  
+        flex-direction: row;
+        align-items: center;
+        width: 70%;
+    }
+
+    .navBar .ulNavigation li{
+        list-style: none;
+        border-bottom: 1px solid grey;
+    }
+
+    .navBar .ulNavigation li a{
+    color: var(--light)
+    }
+
+    /* main styles *************** */
+
+    .articlesContainer{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+
+    .articlesContainer article{
+    
+        margin-bottom: 0;
+        padding: 5%;
+        text-align: left;
+    }
+
+    .articlesContainer article h2{
+        color: var(--secondBlue);
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .articlesContainer article h2::before{
+        content: '';
+    }
+
+    .articlesContainer article:nth-child(even){
+        text-align: left;
+        margin:  0;
+    }
+
+    .articlesContainer article .star, .articlesContainer article .chulo{
+        display: inline-block;
+        color: var(--mainBlue);
+        font-size: 1.5rem;
+        font-weight: bold;
+        align-self: center;
+    }
+
+    /* us styles **************** */
+
+    .us .usContent{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .us .usContent .profileContainer{
+        flex-direction: row;
+        position: relative;
+    }
+
+    .us .usContent .profileContainer img{
+        width: 50%;
+    }
+
+    .us .usContent .profileContainer .textProfile{
+        border: 2px solid gold;
+        padding: 15px;
+        position: absolute;
+        right: 10px;
+        background-color: white;
+        width: 60%;
+        height: auto;
+    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (min-width: 900px){
+    .navBar .ulNavigation{
+        width: 50%;
+    }
+
+    .us .usContent .profileContainer .textProfile{
+        font-size: 1.5rem;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .articlesContainer article{
+        font-size: 1.3rem;
+        
+    }
+
+    .us .usContent .profileTittleContent{
+        font-size: 1.5rem;
+    }
+
+ }
